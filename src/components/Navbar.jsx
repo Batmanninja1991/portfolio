@@ -18,22 +18,36 @@ const Navbar = () => {
       <div className="h-full flex justify-between items-center px-8">
         <div>
           <Link to="/">
-            <p className="text-xl lg:text-2xl font-futura">David Shaw</p>
+            <p className="text-xl lg:text-2xl">David Shaw</p>
+          </Link>
+        </div>
+        <div className="hidden md:flex gap-8">
+          <Link to="/" className="hover:underline text-lg">
+            Home
+          </Link>
+          <Link to="/projects" className="hover:underline text-lg">
+            Projects
+          </Link>
+          <Link to="/about" className="hover:underline text-lg">
+            About
+          </Link>
+          <Link to="/contact" className="hover:underline text-lg">
+            Contact
           </Link>
         </div>
         <div
-          className="flex justify-center items-center gap-4 md:hidden"
+          className="flex justify-center items-center gap-4 md:hidden z-50"
           onClick={handleMenu}
         >
           {!menuOpen ? (
             <AiOutlineMenu size={40} />
           ) : (
-            <AiOutlineClose size={40} />
+            <AiOutlineClose size={40} className="text-white" />
           )}
         </div>
       </div>
       {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 z-40">
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-40 md:hidden">
           <ul className="flex flex-col justify-center items-center gap-12 p-8 h-full">
             <Link to="/" onClick={handleLinkClick}>
               <li className="hover:underline text-white text-2xl">Home</li>
