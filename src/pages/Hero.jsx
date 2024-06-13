@@ -1,55 +1,166 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import project1 from "../assets/ocp.jpg";
+import project2 from "../assets/ns.jpg";
+import project3 from "../assets/todoList.jpg";
+import project4 from "../assets/asteroids.jpg";
+import profileImg from "../assets/profileImg.jpeg";
 
 const Hero = () => {
   return (
-    <div
-      id="hero"
-      className="w-full h-screen flex justify-center text-center pt-28 bg-gray-900"
-    >
-      <div className="w-3/4 flex flex-col justify-center gap-20 text-left">
-        <div>
-          <p className="text-base text-white">Hi, my name is</p>
-          <h1 className="pl-4 text-4xl md:text-6xl text-blue-600">
-            David Shaw.
-          </h1>
-          <p className="pl-4 text-2xl leading-loose text-blue-300">
-            A Full Stack Web Developer
+    <div>
+      <div
+        id="hero"
+        className="w-full h-screen flex flex-col justify-center items-center text-center bg-gray-900"
+      >
+        <div className="w-3/4 flex flex-col justify-center gap-10 text-left">
+          <div>
+            <p className="text-base text-white">Hi, my name is</p>
+            <h1 className="pl-4 text-5xl text-blue-600">David Shaw.</h1>
+            <p className="pl-8 text-xl leading-loose text-blue-300">
+              A Full Stack Web Developer
+            </p>
+            <p className="text-base leading-tight text-white">
+              My current focus is on developing user-friendly software that
+              combines aesthetics with functionality.
+            </p>
+          </div>
+          <div className="flex gap-8 justify-center items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/batmanninja1991"
+            >
+              <FaGithub size={40} className="text-purple-800" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/david-shaw-385049189/"
+            >
+              <FaLinkedin size={40} className="text-blue-600" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:sterilemindwebdesign@gmail.com"
+            >
+              <AiOutlineMail size={40} className="text-white" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/** About Me Section */}
+      <div
+        id="about-section"
+        className="w-full h-screen flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
+      >
+        <div className="py-3 px-2 bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
+          <div className="bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
+            <div className="p-6">
+              <img src={profileImg} className="rounded-3xl -rotate-135" />
+            </div>
+          </div>
+        </div>
+        <div className="w-3/4 md:w-1/2 flex flex-col items-center p-4">
+          <h2 className="text-3xl text-white my-4">About Me</h2>
+          <p className="text-base text-blue-300 text-center mb-4">
+            Hello! I'm David Shaw, a junior full stack web developer with a
+            passion for creating web applications that are both functional and
+            visually appealing.
           </p>
-          <p className="text-base leading-tight text-white">
-            My current focus is on developing user-friendly software that
-            combines aesthetics with functionality.
+          <p className="text-base text-blue-300 text-center mb-4">
+            I have a strong foundation in both front-end and back-end
+            technologies and enjoy working on projects that challenge me to
+            learn and grow as a developer.
+          </p>
+          <p className="text-base text-blue-300 text-center">
+            My journey in web development began with a curiosity about how
+            websites are built and a desire to create my own. Since then, I have
+            developed a wide range of skills and have worked on various
+            projects, from simple landing pages to full-fledged web
+            applications.
           </p>
         </div>
-        <div className="flex flex-row justify-center items-center gap-12">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/batmanninja1991"
-            className="flex flex-col items-center"
-          >
-            <FaGithub size={50} className="text-purple-800" />
-            <p className="mt-4 text-white">GitHub</p>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/david-shaw-385049189/"
-            className="flex flex-col items-center"
-          >
-            <FaLinkedin size={50} className="text-blue-600" />
-            <p className="mt-4 text-white">LinkedIn</p>
-          </a>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="mailto:sterilemindwebdesign@gmail.com"
-            className="flex flex-col items-center"
-          >
-            <AiOutlineMail size={50} className="text-white" />
-            <p className="mt-4 text-white">Email</p>
-          </a>
+        <img src={profileImg} className="hidden md:w-[400px]" />
+      </div>
+
+      {/** Projects Section */}
+      <div
+        id="projects-section"
+        className="w-full h-full flex flex-col justify-center items-center bg-gray-700 text-center"
+      >
+        <div className="flex flex-col gap-12 md:gap-20 p-10 max-w-6xl">
+          <div className="flex flex-col text-lg items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/batmanninja1991/Optimus-community-programs"
+              className="flex flex-col items-center gap-4 max-w-[500px]"
+            >
+              <img
+                src={project1}
+                className="rounded-xl w-3/4 md:w-full"
+                alt="Customer Company Website"
+              />
+              <p className="text-center bg-white text-black rounded-xl p-2">
+                Company Website
+              </p>
+            </a>
+          </div>
+          <div className="flex flex-col text-lg items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/batmanninja1991/nailSalon"
+              className="flex flex-col items-center gap-4 max-w-[500px]"
+            >
+              <img
+                src={project2}
+                className="rounded-xl w-3/4 md:w-full"
+                alt="Customer Nail Salon Website"
+              />
+              <p className="text-center bg-white text-black rounded-xl p-2">
+                Nail Salon Website
+              </p>
+            </a>
+          </div>
+          <div className="flex flex-col text-lg items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/batmanninja1991/todoList"
+              className="flex flex-col items-center gap-4 max-w-[500px]"
+            >
+              <img
+                src={project3}
+                className="rounded-xl w-3/4 md:w-full"
+                alt="Todo List"
+              />
+              <p className="text-center bg-white text-black rounded-xl p-2">
+                Todo List
+              </p>
+            </a>
+          </div>
+          <div className="flex flex-col text-lg items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/batmanninja1991/asteroids"
+              className="flex flex-col items-center gap-4 max-w-[500px]"
+            >
+              <img
+                src={project4}
+                className="rounded-xl w-3/4 md:w-full"
+                alt="Asteroids Game"
+              />
+              <p className="text-center bg-white text-black rounded-xl p-2">
+                Asteroids
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
