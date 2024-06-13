@@ -15,10 +15,19 @@ const Hero = () => {
             combines aesthetics with functionality.
           </p>
         </div>
-        <div className="flex gap-6 justify-center items-center">
-          <FaGithub size={40} />
-          <FaLinkedin size={40} />
-          <AiOutlineMail size={40} />
+        <div className="flex gap-8 justify-center items-center">
+          <a target="_blank" href="https://github.com/batmanninja1991">
+            <FaGithub size={40} className="text-purple-800" />
+          </a>
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/david-shaw-385049189/"
+          >
+            <FaLinkedin size={40} className="text-blue-600" />
+          </a>
+          <a target="_blank" href="mailto:sterilemindwebdesign@gmail.com">
+            <AiOutlineMail size={40} />
+          </a>
         </div>
       </div>
     </div>
