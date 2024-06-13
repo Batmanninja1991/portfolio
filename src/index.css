@@ -1,0 +1,35 @@
+/* src/tailwind.css */
+@font-face {
+  font-family: "Futura";
+  src: url("./fonts/Futura-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("./fonts/ProximaNova-Regular.woff2") format("woff2");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #d6c3c9;
+}
+
+.menu{
+    animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
