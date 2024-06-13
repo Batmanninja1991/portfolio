@@ -9,7 +9,7 @@ const Hero = () => {
         <div>
           <p>Hi, my name is</p>
           <h1 className="text-5xl">David Shaw.</h1>
-          <p className="text-2xl leading-loose">A Full Stack Web Developer</p>
+          <p className=" flex text-2xl leading-loose">A Full Stack Web Developer</p>
           <p className="leading-tight">
             My current focus is on developing user-friendly software that
             combines aesthetics with functionality.
