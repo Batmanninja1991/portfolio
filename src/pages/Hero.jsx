@@ -7,10 +7,10 @@ const Hero = () => {
     <div id="hero" className="w-full h-screen flex justify-center text-center">
       <div className="w-2/3 flex flex-col justify-center gap-20 text-left">
         <div>
-          <p>Hi, my name is</p>
+          <p className="text-base">Hi, my name is</p>
           <h1 className="text-5xl">David Shaw.</h1>
-          <p className=" flex text-2xl leading-loose">A Full Stack Web Developer</p>
-          <p className="leading-tight">
+          <p className="text-xl leading-loose">A Full Stack Web Developer</p>
+          <p className="text-base leading-tight">
             My current focus is on developing user-friendly software that
             combines aesthetics with functionality.
           </p>
