@@ -1,6 +1,4 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
 import project1 from "../assets/ocp.jpg";
 import project2 from "../assets/ns.jpg";
 import project3 from "../assets/todoList.jpg";
@@ -21,33 +19,10 @@ const Hero = () => {
             <p className="pl-8 text-xl leading-loose text-blue-300">
               A Full Stack Web Developer
             </p>
-            <p className="text-base leading-tight text-white">
+            <p className="text-base pt-2 leading-tight text-white">
               My current focus is on developing user-friendly software that
               combines aesthetics with functionality.
             </p>
-          </div>
-          <div className="flex gap-8 justify-center items-center">
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/batmanninja1991"
-            >
-              <FaGithub size={40} className="text-purple-800" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/david-shaw-385049189/"
-            >
-              <FaLinkedin size={40} className="text-blue-600" />
-            </a>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="mailto:sterilemindwebdesign@gmail.com"
-            >
-              <AiOutlineMail size={40} className="text-white" />
-            </a>
           </div>
         </div>
       </div>
