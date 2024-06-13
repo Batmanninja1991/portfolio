@@ -47,7 +47,7 @@ const Navbar = () => {
         </div>
       </div>
       {menuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-40 md:hidden">
+        <div className="fixed menu inset-0 bg-black bg-opacity-90 z-40 md:hidden">
           <ul className="flex flex-col justify-center items-center gap-12 p-8 h-full">
             <Link to="/" onClick={handleLinkClick}>
               <li className="hover:underline text-white text-2xl">Home</li>
