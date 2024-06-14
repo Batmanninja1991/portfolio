@@ -30,7 +30,7 @@ const Hero = () => {
       {/** About Me Section */}
       <div
         id="about-section"
-        className="w-full h-full flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
+        className="w-full h-screen flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
       >
         <div className="py-3 px-2 bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
           <div className="bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
@@ -45,13 +45,6 @@ const Hero = () => {
             Hello! I'm David Shaw, a junior full stack web developer with a
             passion for creating web applications that are both functional and
             visually appealing.
-          </p>
-          <p className="text-base text-blue-300 text-center">
-            My journey in web development began with a curiosity about how
-            websites are built and a desire to create my own. Since then, I have
-            developed a wide range of skills and have worked on various
-            projects, from simple landing pages to full-fledged web
-            applications.
           </p>
         </div>
         <img src={profileImg} className="hidden md:w-[400px]" />
