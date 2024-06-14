@@ -66,8 +66,9 @@ const Navbar = () => {
           </ul>
         </div>
       )}
+
       {/** sticky links */}
-      <div className="fixed flex flex-col justify-center items-center gap-4 p-2">
+      <div className="fixed flex flex-col justify-center items-center gap-4 p-2 ">
         <a
           target="_blank"
           rel="noopener noreferrer"

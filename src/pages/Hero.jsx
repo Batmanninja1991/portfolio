@@ -1,8 +1,8 @@
 import React from "react";
-import project1 from "../assets/ocp.jpg";
-import project2 from "../assets/ns.jpg";
-import project3 from "../assets/todoList.jpg";
-import project4 from "../assets/asteroids.jpg";
+import project1 from "../assets/ocp.png";
+import project2 from "../assets/ns.png";
+import project3 from "../assets/todoList.png";
+import project4 from "../assets/asteroids.png";
 import profileImg from "../assets/profileImg.jpeg";
 
 const Hero = () => {
@@ -67,7 +67,7 @@ const Hero = () => {
         id="projects-section"
         className="w-full h-full flex flex-col justify-center items-center bg-gray-700 text-center"
       >
-        <div className="flex flex-col gap-12 md:gap-20 p-10 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 p-10 max-w-6xl">
           <div className="flex flex-col text-lg items-center">
             <a
               target="_blank"
@@ -77,7 +77,7 @@ const Hero = () => {
             >
               <img
                 src={project1}
-                className="rounded-xl w-3/4 md:w-full"
+                className="rounded-xl w-2/3"
                 alt="Customer Company Website"
               />
               <p className="text-center bg-white text-black rounded-xl p-2">
@@ -94,7 +94,7 @@ const Hero = () => {
             >
               <img
                 src={project2}
-                className="rounded-xl w-3/4 md:w-full"
+                className="rounded-xl w-2/3"
                 alt="Customer Nail Salon Website"
               />
               <p className="text-center bg-white text-black rounded-xl p-2">
@@ -111,7 +111,7 @@ const Hero = () => {
             >
               <img
                 src={project3}
-                className="rounded-xl w-3/4 md:w-full"
+                className="rounded-xl w-2/3"
                 alt="Todo List"
               />
               <p className="text-center bg-white text-black rounded-xl p-2">
@@ -128,7 +128,7 @@ const Hero = () => {
             >
               <img
                 src={project4}
-                className="rounded-xl w-3/4 md:w-full"
+                className="rounded-xl w-2/3"
                 alt="Asteroids Game"
               />
               <p className="text-center bg-white text-black rounded-xl p-2">

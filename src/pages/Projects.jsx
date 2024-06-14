@@ -1,8 +1,8 @@
 import React from "react";
-import project1 from "../assets/ocp.jpg";
-import project2 from "../assets/ns.jpg";
-import project3 from "../assets/todoList.jpg";
-import project4 from "../assets/asteroids.jpg";
+import project1 from "../assets/ocp.png";
+import project2 from "../assets/ns.png";
+import project3 from "../assets/todoList.png";
+import project4 from "../assets/asteroids.png";
 
 const Projects = () => {
   return (
@@ -49,7 +49,11 @@ const Projects = () => {
             href="https://github.com/batmanninja1991/todoList"
             className="flex flex-col items-center gap-4"
           >
-            <img src={project3} className="rounded-xl w-3/4 md:w-full" alt="Todo List" />
+            <img
+              src={project3}
+              className="rounded-xl w-3/4 md:w-full"
+              alt="Todo List"
+            />
             <p className="text-center bg-white text-black rounded-xl p-2">
               Todo List
             </p>
