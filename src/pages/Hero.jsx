@@ -72,7 +72,7 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/batmanninja1991/Optimus-community-programs"
+              href="https://batmanninja1991.github.io/Optimus-community-programs"
               className="flex flex-col items-center gap-4 max-w-[500px]"
             >
               <img
@@ -89,7 +89,7 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/batmanninja1991/nailSalon"
+              href="https://batmanninja1991.github.io/nailSalon"
               className="flex flex-col items-center gap-4 max-w-[500px]"
             >
               <img
@@ -106,7 +106,7 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/batmanninja1991/todoList"
+              href="https://batmanninja1991.github.io/todoList"
               className="flex flex-col items-center gap-4 max-w-[500px]"
             >
               <img
@@ -123,7 +123,7 @@ const Hero = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://github.com/batmanninja1991/asteroids"
+              href="https://batmanninja1991.github.io/asteroids"
               className="flex flex-col items-center gap-4 max-w-[500px]"
             >
               <img
