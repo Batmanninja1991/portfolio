@@ -56,6 +56,7 @@ const Hero = () => {
         className="w-full h-full flex flex-col justify-center items-center bg-gray-700 text-center"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 p-10 max-w-6xl">
+        <h2 className="text-3xl text-white">Projects</h2>
           <div className="flex flex-col text-lg items-center">
             <a
               target="_blank"
