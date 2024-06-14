@@ -39,9 +39,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="w-3/4 md:w-1/2 flex flex-col items-center p-4">
-          <h2 className="text-3xl text-white my-4">About Me</h2>
-          <p className="text-base text-blue-300 text-center mb-4">
+        <div className="w-full md:w-1/2 flex flex-col items-center p-4">
+          <h2 className="text-3xl text-white my-10">About Me</h2>
+          <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide">
             Hello! I'm David Shaw, a junior full stack web developer with a
             passion for creating web applications that are both functional and
             visually appealing.
