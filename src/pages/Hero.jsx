@@ -30,7 +30,7 @@ const Hero = () => {
       {/** About Me Section */}
       <div
         id="about-section"
-        className="w-full h-screen flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
+        className="w-full h-full flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
       >
         <div className="py-3 px-2 bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
           <div className="bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
