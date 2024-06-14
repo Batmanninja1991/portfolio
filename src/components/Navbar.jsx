@@ -66,34 +66,6 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-
-      {/** sticky links */}
-      <div className="fixed flex flex-col justify-center items-center gap-4 p-2 ">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/batmanninja1991"
-          className="flex flex-col items-center hover:scale-105"
-        >
-          <FaGithub size={40} className="text-purple-800" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/david-shaw-385049189/"
-          className="flex flex-col items-center hover:scale-105"
-        >
-          <FaLinkedin size={40} className="text-blue-600" />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="mailto:sterilemindwebdesign@gmail.com"
-          className="flex flex-col items-center hover:scale-105"
-        >
-          <AiOutlineMail size={40} className="text-white" />
-        </a>
-      </div>
     </div>
   );
 };
