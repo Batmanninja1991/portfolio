@@ -46,11 +46,6 @@ const Hero = () => {
             passion for creating web applications that are both functional and
             visually appealing.
           </p>
-          <p className="text-base text-blue-300 text-center mb-4">
-            I have a strong foundation in both front-end and back-end
-            technologies and enjoy working on projects that challenge me to
-            learn and grow as a developer.
-          </p>
           <p className="text-base text-blue-300 text-center">
             My journey in web development began with a curiosity about how
             websites are built and a desire to create my own. Since then, I have
