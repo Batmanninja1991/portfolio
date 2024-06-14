@@ -32,7 +32,7 @@ const Contact = () => {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="mailto:sterilemindwebdesign@gmail.com"
+            href="mailto:davidshawwebdesign@gmail.com"
             className="flex flex-col items-center"
           >
             <AiOutlineMail size={50} className="text-white" />
