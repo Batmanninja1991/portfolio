@@ -9,13 +9,10 @@ const About = () => {
       id="about"
       className="w-full h-full pt-28 text-white flex justify-center items-center"
     >
-      <div className="max-w-4xl mx-auto p-8">
+      <div className="max-w-4xl mx-auto p-8 text-center">
         <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
         <p className="text-lg mb-8">
-          Hello! I'm David Shaw, a junior full stack web developer with a passion for creating web applications that are both functional and visually appealing. I have a strong foundation in both front-end and back-end technologies and enjoy working on projects that challenge me to learn and grow as a developer.
-        </p>
-        <p className="text-lg mb-8">
-          I have had a passion for coding since I was a young teenager. It all started when I decided to find out how to brute force game saves on PlayStation to get modded items. Since then, I have grown more passionate about becoming a software engineer. I have chosen this path of web development to develop a solid understanding of the basics.
+        Hello! I'm David Shaw, I have had a passion for coding since I was a young teenager. It all started when I decided to find out how to brute force game saves on PlayStation to get modded items. Since then, I have grown more passionate about becoming a software engineer. I have chosen this path of web development to develop a solid understanding of the basics.
         </p>
         <p className="text-lg mb-8">
           My journey in web development began with a curiosity about how websites are built and a desire to create my own. Since then, I have developed a wide range of skills and have worked on various projects, from simple landing pages to full-fledged web applications.
