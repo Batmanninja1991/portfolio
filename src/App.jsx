@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Hero from "./pages/Hero";
-import About from "./pages/About";
+import About from "./pages/about/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route index element={<Hero />} />
-        <Route path="/portfolio" element={<Hero />} />
+        <Route path="/" basenme="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
