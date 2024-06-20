@@ -34,18 +34,8 @@ const projects = [
 ];
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   useEffect(() => {
-    const handleLoad = () => {
-      setIsLoaded(true);
-    };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -54,6 +44,10 @@ const Hero = () => {
         id="hero"
         className="w-full h-screen flex flex-col justify-center items-center text-center bg-gray-900"
       >
+        {/** Curves */}
+        <div className="-top-10 md:hidden wavesTop bg-blue-600"></div>
+        <div className="absolute -bottom-20 md:hidden wavesBottom bg-gray-800"></div>
+        {/** Curves */}
         <div className="w-3/4 flex flex-col justify-center gap-10 text-left">
           <div>
             <p className="text-base text-white">Hi, my name is</p>
@@ -70,9 +64,7 @@ const Hero = () => {
         <img
           id="hero-image"
           src={heroImg}
-          className={`absolute w-full h-screen top-0 right-0 ${
-            isLoaded ? "" : "fade-out"
-          }`}
+          className="hidden md:flex absolute w-full h-screen top-0 right-0 hover:opacity-0 transition-all duration-700"
           alt="Hero Background"
         />
       </div>
@@ -94,10 +86,10 @@ const Hero = () => {
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
-          <h2 className="text-3xl text-white underline underline-offset-4 my-10">
+          <h2 className="text-4xl text-white underline underline-offset-4 my-6">
             About Me
           </h2>
-          <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide">
+          <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide md:pl-10">
             Full Stack Web Developer with a passion for creating web
             applications that are both functional and visually appealing.
           </p>
@@ -108,10 +100,10 @@ const Hero = () => {
       {/* Projects Section */}
       <div
         id="projects-section"
-        className="w-full h-full flex flex-col justify-center items-center bg-gray-700 text-center"
+        className="w-full h-full flex flex-col justify-center items-center text-center bg-gray-700"
       >
         <div className="mx-auto py-10">
-          <h2 className="text-3xl text-white underline underline-offset-4">
+          <h2 className="text-4xl text-white underline underline-offset-4">
             Projects
           </h2>
         </div>
@@ -122,7 +114,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={project.link}
-                className="flex flex-col items-center gap-4 hover:scale-105 transition-transform duration-300"
+                className="flex flex-col items-center gap-4 md:hover:scale-105 transition-transform duration-300"
               >
                 <img
                   src={project.img}

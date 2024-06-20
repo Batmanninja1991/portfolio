@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div
       id="about"
@@ -12,16 +16,29 @@ const About = () => {
       <div className="max-w-4xl mx-auto p-8 text-center">
         <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
         <p className="text-lg mb-8">
-        Hello! I'm David Shaw, I have had a passion for coding since I was a young teenager. It all started when I decided to find out how to brute force game saves on PlayStation to get modded items. Since then, I have grown more passionate about becoming a software engineer. I have chosen this path of web development to develop a solid understanding of the basics.
+          Hello! I'm David Shaw, I have had a passion for coding since I was a
+          young teenager. It all started when I decided to find out how to brute
+          force game saves on PlayStation to get modded items. Since then, I
+          have grown more passionate about becoming a software engineer. I have
+          chosen this path of web development to develop a solid understanding
+          of the basics.
         </p>
         <p className="text-lg mb-8">
-          My journey in web development began with a curiosity about how websites are built and a desire to create my own. Since then, I have developed a wide range of skills and have worked on various projects, from simple landing pages to full-fledged web applications.
+          My journey in web development began with a curiosity about how
+          websites are built and a desire to create my own. Since then, I have
+          developed a wide range of skills and have worked on various projects,
+          from simple landing pages to full-fledged web applications.
         </p>
         <p className="text-lg mb-8">
-          I am proficient in HTML, CSS, JavaScript, and have experience working with modern frameworks and libraries like React and Node.js. I am also familiar with Tailwind CSS for building responsive and modern designs quickly.
+          I am proficient in HTML, CSS, JavaScript, and have experience working
+          with modern frameworks and libraries like React and Node.js. I am also
+          familiar with Tailwind CSS for building responsive and modern designs
+          quickly.
         </p>
         <p className="text-lg mb-8">
-          I am constantly learning and staying up-to-date with the latest trends and technologies in web development to ensure that I am always delivering the best possible solutions for my projects.
+          I am constantly learning and staying up-to-date with the latest trends
+          and technologies in web development to ensure that I am always
+          delivering the best possible solutions for my projects.
         </p>
         <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
         <div className="grid grid-cols-3 gap-8">

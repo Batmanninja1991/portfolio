@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div id="contact" className="w-full h-screen pt-28 text-white flex justify-center items-center">
+    <div
+      id="contact"
+      className="w-full h-screen pt-28 text-white flex justify-center items-center"
+    >
       <div className="max-w-4xl mx-auto p-8">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
         <p className="text-lg mb-8 text-center">
-          I'm always open to discussing web development projects, freelance work, or opportunities to collaborate. Feel free to reach out to me through any of the platforms below.
+          I'm always open to discussing web development projects, freelance
+          work, or opportunities to collaborate. Feel free to reach out to me
+          through any of the platforms below.
         </p>
         <div className="flex flex-row justify-center items-center gap-12">
           <a

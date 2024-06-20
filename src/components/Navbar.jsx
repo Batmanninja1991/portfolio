@@ -16,6 +16,8 @@ const Navbar = () => {
 
   return (
     <div className="w-full h-[80px] bg-white fixed top-0 left-0 z-50 px-4">
+
+      {/** Navbar */}
       <div className="h-full flex justify-between items-center px-8">
         <div>
           <Link to="/">
@@ -49,9 +51,11 @@ const Navbar = () => {
           )}
         </div>
       </div>
+
+      {/** Hidden Menu */}
       {menuOpen && (
         <div className="fixed menu inset-0 bg-black bg-opacity-90 z-40 md:hidden">
-          <ul className="flex flex-col justify-center items-center gap-12 p-8 h-full">
+          <ul className="flex flex-col justify-end items-end p-20 gap-12 h-full">
             <Link to="/" onClick={handleLinkClick}>
               <li className="hover:underline text-white text-2xl">Home</li>
             </Link>
