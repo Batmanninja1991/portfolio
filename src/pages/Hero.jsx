@@ -46,7 +46,7 @@ const Hero = () => {
       >
         {/** Curves */}
         <div className="-top-10 md:hidden wavesTop bg-blue-600"></div>
-        <div className="absolute -bottom-20 md:hidden wavesBottom bg-gray-800"></div>
+        <div className="absolute -bottom-32 md:hidden wavesBottom bg-gray-800"></div>
         {/** Curves */}
         <div className="w-3/4 flex flex-col justify-center gap-10 text-left">
           <div>
