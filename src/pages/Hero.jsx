@@ -1,10 +1,11 @@
-import React from 'react';
-import project1 from '../assets/ocp.png';
-import project2 from '../assets/ns.png';
-import project3 from '../assets/todoList.png';
-import project4 from '../assets/asteroids.png';
-import profileImg from '../assets/profileImg.jpeg';
-import heroImg from '../assets/purpleBg.jpg'
+import React, { useState, useEffect } from "react";
+import project1 from "../assets/ocp.png";
+import project2 from "../assets/ns.png";
+import project3 from "../assets/todoList.png";
+import project4 from "../assets/asteroids.png";
+import profileImg from "../assets/profileImg.jpeg";
+import heroImg from "../assets/purpleBg.jpg";
+
 const projects = [
   {
     img: project1,
@@ -33,6 +34,20 @@ const projects = [
 ];
 
 const Hero = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsLoaded(true);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+  }, []);
+
   return (
     <div className="w-full h-full text-white flex flex-col">
       <div
@@ -52,7 +67,14 @@ const Hero = () => {
             </p>
           </div>
         </div>
-        <img src={heroImg} className='absolute w-full h-screen top-0 right-0 focus:opacity-0 hover:opacity-0 transition-all duration-500' />
+        <img
+          id="hero-image"
+          src={heroImg}
+          className={`absolute w-full h-screen top-0 right-0 ${
+            isLoaded ? "" : "fade-out"
+          }`}
+          alt="Hero Background"
+        />
       </div>
 
       {/* About Me Section */}
@@ -63,19 +85,24 @@ const Hero = () => {
         <div className="py-3 px-2 bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
           <div className="bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
             <div className="p-6">
-              <img src={profileImg} className="rounded-3xl -rotate-135" />
+              <img
+                src={profileImg}
+                className="rounded-3xl -rotate-135"
+                alt="Profile"
+              />
             </div>
           </div>
         </div>
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
-          <h2 className="text-3xl text-white underline underline-offset-4 my-10">About Me</h2>
+          <h2 className="text-3xl text-white underline underline-offset-4 my-10">
+            About Me
+          </h2>
           <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide">
-            Full Stack Web Developer with a
-            passion for creating web applications that are both functional and
-            visually appealing.
+            Full Stack Web Developer with a passion for creating web
+            applications that are both functional and visually appealing.
           </p>
         </div>
-        <img src={profileImg} className="hidden md:w-[400px]" />
+        <img src={profileImg} className="hidden md:w-[400px]" alt="Profile" />
       </div>
 
       {/* Projects Section */}
@@ -84,7 +111,9 @@ const Hero = () => {
         className="w-full h-full flex flex-col justify-center items-center bg-gray-700 text-center"
       >
         <div className="mx-auto py-10">
-          <h2 className="text-3xl text-white underline underline-offset-4">Projects</h2>
+          <h2 className="text-3xl text-white underline underline-offset-4">
+            Projects
+          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 lg:gap-20 p-10 max-w-6xl">
           {projects.map((project, index) => (
