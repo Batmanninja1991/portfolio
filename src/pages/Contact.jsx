@@ -5,7 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  });
 
   return (
     <div

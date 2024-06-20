@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import project1 from "../assets/ocp.png";
 import project2 from "../assets/ns.png";
 import project3 from "../assets/todoList.png";
 import project4 from "../assets/asteroids.png";
 import profileImg from "../assets/profileImg.jpeg";
 import heroImg from "../assets/purpleBg.jpg";
+import bgImg from "../assets/futuristicHome.webp";
 
 const projects = [
   {
@@ -34,6 +35,44 @@ const projects = [
 ];
 
 const Hero = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 700);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 700);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const heroImage = document.getElementById("hero-image");
+
+    const handleMouseEnter = () => {
+      setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsHovered(false);
+    };
+
+    if (heroImage) {
+      heroImage.addEventListener("mouseenter", handleMouseEnter);
+      heroImage.addEventListener("mouseleave", handleMouseLeave);
+    }
+
+    return () => {
+      if (heroImage) {
+        heroImage.removeEventListener("mouseenter", handleMouseEnter);
+        heroImage.removeEventListener("mouseleave", handleMouseLeave);
+      }
+    };
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -42,14 +81,11 @@ const Hero = () => {
     <div className="w-full h-full text-white flex flex-col">
       <div
         id="hero"
-        className="w-full h-screen flex flex-col justify-center items-center text-center bg-gray-900"
+        className={`w-full h-screen flex flex-col justify-center items-center text-center ${isLargeScreen ? 'bg-cover bg-center' : 'bg-gray-900'}`}
+        style={{ backgroundImage: isLargeScreen ? `url(${bgImg})` : 'none' }}
       >
-        {/** Curves */}
-        <div className="-top-10 md:hidden wavesTop bg-blue-600"></div>
-        <div className="absolute -bottom-32 md:hidden wavesBottom bg-gray-800"></div>
-        {/** Curves */}
-        <div className="w-3/4 flex flex-col justify-center gap-10 text-left">
-          <div>
+        <div className="w-full md:w-3/4 flex flex-col justify-center gap-10 text-left">
+          <div className="w-full md:w-3/4 bg-gray-800 p-4 rounded-3xl">
             <p className="text-base text-white">Hi, my name is</p>
             <h1 className="pl-4 text-5xl text-blue-600">David Shaw.</h1>
             <p className="pl-8 text-xl leading-loose text-blue-300">
@@ -64,7 +100,9 @@ const Hero = () => {
         <img
           id="hero-image"
           src={heroImg}
-          className="hidden md:flex absolute w-full h-screen top-0 right-0 hover:opacity-0 transition-all duration-700"
+          className={`hidden md:flex absolute w-full h-screen top-0 right-0 transition-all duration-700 ${
+            isHovered ? 'opacity-0' : ''
+          }`}
           alt="Hero Background"
         />
       </div>
@@ -74,12 +112,12 @@ const Hero = () => {
         id="about-section"
         className="w-full h-screen flex md:flex-row flex-col justify-center items-center bg-gray-800 text-center"
       >
-        <div className="py-3 px-2 bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
-          <div className="bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
+        <div className="py-3 px-2 bg-transparent border-black border-4 rounded-e-full w-[300px] h-[300px] rotate-135">
+          <div className="bg-transparent border-gray-700 border-4 rounded-e-full w-[300px] h-[300px]">
             <div className="p-6">
               <img
                 src={profileImg}
-                className="rounded-3xl -rotate-135"
+                className="rounded-3xl -translate-x-6"
                 alt="Profile"
               />
             </div>

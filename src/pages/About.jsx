@@ -14,32 +14,36 @@ const About = () => {
       className="w-full h-full pt-28 text-white flex justify-center items-center"
     >
       <div className="max-w-4xl mx-auto p-8 text-center">
-        <h1 className="text-4xl font-bold mb-8 text-center">About Me</h1>
-        <p className="text-lg mb-8">
+        <h1 className="text-4xl font-bold mb-8">About Me</h1>
+        <p className="text-lg">
           Hello! I'm David Shaw, I have had a passion for coding since I was a
           young teenager. It all started when I decided to find out how to brute
-          force game saves on PlayStation to get modded items. Since then, I
-          have grown more passionate about becoming a software engineer. I have
-          chosen this path of web development to develop a solid understanding
-          of the basics.
+          force game saves on PlayStation to get modded items.
         </p>
-        <p className="text-lg mb-8">
-          My journey in web development began with a curiosity about how
-          websites are built and a desire to create my own. Since then, I have
-          developed a wide range of skills and have worked on various projects,
-          from simple landing pages to full-fledged web applications.
+
+        <div className="flex justify-center items-center py-4">
+          <hr className="w-full border-1 border-gray-600" />
+        </div>
+
+        <p className="text-lg">
+          Since then, I have grown more passionate about becoming a software
+          engineer. I have chosen this path of web development to develop a
+          solid understanding of the basics.
         </p>
-        <p className="text-lg mb-8">
-          I am proficient in HTML, CSS, JavaScript, and have experience working
-          with modern frameworks and libraries like React and Node.js. I am also
-          familiar with Tailwind CSS for building responsive and modern designs
-          quickly.
+
+        <div className="flex justify-center items-center py-4">
+          <hr className="w-3/4 border-1 border-gray-600" />
+        </div>
+
+        <p className="text-lg">
+          I am proficient in HTML, Tailwind/CSS, JavaScript, and have experience
+          working with modern frameworks and libraries like React and Node.js.
         </p>
-        <p className="text-lg mb-8">
-          I am constantly learning and staying up-to-date with the latest trends
-          and technologies in web development to ensure that I am always
-          delivering the best possible solutions for my projects.
-        </p>
+
+        <div className="flex justify-center items-center py-4">
+          <hr className="w-1/2 border-1 border-gray-600" />
+        </div>
+
         <h2 className="text-3xl font-bold mb-4 text-center">Skills</h2>
         <div className="grid grid-cols-3 gap-8">
           <div className="flex flex-col items-center">

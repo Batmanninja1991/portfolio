@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+html,
+body {
   scroll-behavior: smooth;
 }
 
 body {
   background: rgb(30, 30, 30);
-  overflow-x: hidden;
 }
 
 .menu {
@@ -22,18 +22,4 @@ body {
   to {
     transform: translateY(0);
   }
-}
-
-.wavesTop{
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 150%;
-  height: 25%;
-}
-
-.wavesBottom{
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 150%;
-  height: 25%;
 }
