@@ -4,7 +4,7 @@ import project2 from '../assets/ns.png';
 import project3 from '../assets/todoList.png';
 import project4 from '../assets/asteroids.png';
 import profileImg from '../assets/profileImg.jpeg';
-
+import heroImg from '../assets/purpleBg.jpg'
 const projects = [
   {
     img: project1,
@@ -34,7 +34,7 @@ const projects = [
 
 const Hero = () => {
   return (
-    <div className="w-full h-full text-white">
+    <div className="w-full h-full text-white flex flex-col">
       <div
         id="hero"
         className="w-full h-screen flex flex-col justify-center items-center text-center bg-gray-900"
@@ -52,6 +52,7 @@ const Hero = () => {
             </p>
           </div>
         </div>
+        <img src={heroImg} className='absolute w-full h-screen top-0 right-0 focus:opacity-0 hover:opacity-0 transition-all duration-500' />
       </div>
 
       {/* About Me Section */}
@@ -69,7 +70,7 @@ const Hero = () => {
         <div className="w-full md:w-1/2 flex flex-col items-center p-4">
           <h2 className="text-3xl text-white underline underline-offset-4 my-10">About Me</h2>
           <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide">
-            Hello! I'm David Shaw, a junior full stack web developer with a
+            Full Stack Web Developer with a
             passion for creating web applications that are both functional and
             visually appealing.
           </p>
@@ -96,10 +97,10 @@ const Hero = () => {
               >
                 <img
                   src={project.img}
-                  className="rounded-xl w-full h-96 object-cover"
+                  className="rounded-xl w-full h-96 object-cover object-top"
                   alt={project.alt}
                 />
-                <p className="text-center bg-white text-black rounded-xl p-3 w-full">
+                <p className="text-center bg-white tracking-wide text-[26px] text-black rounded-xl p-3 w-full">
                   {project.title}
                 </p>
               </a>

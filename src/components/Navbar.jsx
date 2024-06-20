@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import logo from "../assets/favicon.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,11 +15,13 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-[80px] bg-white fixed top-0 left-0 z-50">
+    <div className="w-full h-[80px] bg-white fixed top-0 left-0 z-50 px-4">
       <div className="h-full flex justify-between items-center px-8">
         <div>
           <Link to="/">
-            <p className="text-xl lg:text-2xl">David Shaw</p>
+            <p className="text-xl lg:text-2xl">
+              <img src={logo} className="w-1/2 h-1/2 object-contain" />
+            </p>
           </Link>
         </div>
         <div className="hidden md:flex gap-8">

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="w-full h-full">
       <div className="bg-black h-full p-10">
-        <div className="flex justify-around items-center gap-4 text-white">
+        <div className="flex justify-around items-center gap-4 text-white text-[22px]">
           <Link to="/">
             <p className="hover:underline">Home</p>
           </Link>

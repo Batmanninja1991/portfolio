@@ -45,10 +45,10 @@ const Projects = () => {
             >
               <img
                 src={project.img}
-                className="rounded-xl w-full h-96 object-cover"
+                className="rounded-xl w-full h-96 object-cover object-top"
                 alt={project.alt}
               />
-              <p className="text-center bg-white text-black rounded-xl p-3 w-full">
+              <p className="text-center bg-white tracking-wide text-[26px] text-black rounded-xl p-3 w-full">
                 {project.title}
               </p>
             </a>
