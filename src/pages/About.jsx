@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
+import aboutImg from "../assets/astronaut2.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -13,7 +14,9 @@ const About = () => {
       id="about"
       className="w-full h-full pt-28 text-white flex justify-center items-center"
     >
-      <div className="max-w-4xl mx-auto p-8 text-center">
+      <div className="max-w-4xl mx-auto p-8 bg-cover bg-bottom rounded-3xl"
+      style={{backgroundImage: `url(${aboutImg})`}}>
+        <div className="md:w-2/3 rounded-3xl bg-black/70 text-center p-6">
         <h1 className="text-4xl font-bold mb-8">About Me</h1>
         <p className="text-lg">
           Hello! I'm David Shaw, I have had a passion for coding since I was a
@@ -69,6 +72,7 @@ const About = () => {
           <div className="flex flex-col items-center">
             <RiTailwindCssFill size={40} className="text-blue-400" />
             <p className="mt-2">Tailwind CSS</p>
+            </div>
           </div>
         </div>
       </div>

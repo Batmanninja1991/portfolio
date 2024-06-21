@@ -3,6 +3,7 @@ import project1 from "../assets/ocp.png";
 import project2 from "../assets/ns.png";
 import project3 from "../assets/todoList.png";
 import project4 from "../assets/asteroids.png";
+import stars from "../assets/stars.png";
 
 const projects = [
   {
@@ -37,7 +38,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="w-full h-full pt-28 text-white flex justify-center items-center bg-gray-900">
+    <div
+      className="w-full h-full pt-28 text-white flex justify-center items-center bg-cover bg-center"
+      style={{ backgroundImage: `url(${stars})` }}
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 lg:gap-20 p-10 max-w-6xl">
         {projects.map((project, index) => (
           <div key={index} className="flex flex-col text-lg items-center">
