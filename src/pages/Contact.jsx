@@ -8,15 +8,12 @@ const Contact = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const messageResize = message;
-
   return (
     <div id="contact" className="w-full h-screen pt-28">
       <div
         className="w-full h-full text-black flex justify-center items-center"
       >
-        <img src={message} className="absolute hidden md:flex w-full h-full z-1 translate-y-32"/>
-        <div className="w-3/4 md:w-1/2 h-full flex flex-col justify-center z-50 text-white md:text-black">
+        <div className="w-3/4 md:w-1/2 h-full flex flex-col justify-center z-50 text-white">
           <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
           <p className="text-lg mb-8 text-center">
             I'm always open to discussing web development projects, freelance

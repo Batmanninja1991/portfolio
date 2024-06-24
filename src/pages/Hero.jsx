@@ -12,26 +12,34 @@ const projects = [
   {
     img: project1,
     alt: "Customer Company Website",
-    link: "https://batmanninja1991.github.io/Optimus-community-programs",
+    link: "https://ocp.davidshawwebdesign.com",
+    code: "https://github.com/Batmanninja1991/Optimus-community-programs",
     title: "Company Website",
+    bio: "A comprehensive company website designed for an Oregon state community program, offering detailed information and resources for local residents. This project showcases a professional and user-friendly interface with easy navigation and informative content.",
   },
   {
     img: project2,
     alt: "Customer Nail Salon Website",
     link: "https://batmanninja1991.github.io/nailSalon",
+    code: "https://github.com/Batmanninja1991/nailSalon",
     title: "Nail Salon Website",
+    bio: "An elegant and stylish website created for a nail salon, featuring services, pricing, and appointment booking. The design highlights the salon's aesthetic appeal with vibrant visuals and a clean layout, ensuring an excellent user experience.",
   },
   {
     img: project3,
     alt: "Todo List",
     link: "https://batmanninja1991.github.io/todoList",
+    code: "https://github.com/Batmanninja1991/todoList",
     title: "Todo List",
+    bio: "A simple yet efficient todo list application designed to help users manage their daily tasks. This project demonstrates functionality for adding, editing, and deleting tasks, with a minimalist design for easy use and organization.",
   },
   {
     img: project4,
     alt: "Asteroids Game",
     link: "https://batmanninja1991.github.io/asteroids",
+    code: "https://github.com/Batmanninja1991/asteroids",
     title: "Asteroids Game",
+    bio: "A fun and engaging browser-based game inspired by the classic Asteroids arcade game. This project highlights game development skills with smooth animations, interactive controls, and challenging gameplay, providing an entertaining user experience.",
   },
 ];
 
@@ -45,8 +53,8 @@ const Hero = () => {
           backgroundImage: `url(${bgImg})`,
         }}
       >
-        <div className="w-full md:w-3/4 flex flex-col justify-center md:absolute top-24 right-0 gap-10 text-left">
-          <div className="w-full md:w-3/4 xl:w-1/2 bg-black/80 p-4 rounded-3xl">
+        <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-center gap-10 text-left">
+          <div className="w-full bg-black/90 p-8 rounded-3xl">
             <p className="text-base text-white">Hi, my name is</p>
             <h1 className="pl-4 text-5xl text-blue-600">David Shaw.</h1>
             <p className="pl-8 text-xl leading-loose text-blue-300">
@@ -86,14 +94,9 @@ const Hero = () => {
               <p className="text-lg text-blue-300 text-center mb-4 leading-relaxed tracking-wide md:pl-10">
                 A Full Stack Web Developer with a passion for creating web
                 applications that are both functional and visually appealing.
-                Big passion with Sci-fi || Outer Space
+                Big passion with Sci-fi || Outer Space.
               </p>
             </div>
-            <img
-              src={profileImg}
-              className="hidden md:w-[400px]"
-              alt="Profile"
-            />
           </div>
         </section>
 
@@ -112,23 +115,41 @@ const Hero = () => {
             {projects.map((project, index) => (
               <article
                 key={index}
-                className="flex flex-col text-lg items-center"
+                className="flex flex-col text-lg items-center bg-purple-400 p-4 rounded-xl hover:scale-105 transition-all duration-500"
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={project.link}
-                  className="flex flex-col items-center gap-4 md:hover:scale-105 transition-transform duration-300"
-                >
-                  <img
-                    src={project.img}
-                    className="rounded-xl w-full h-96 object-cover object-top"
-                    alt={project.alt}
-                  />
-                  <p className="text-center bg-white tracking-wide text-[26px] text-black rounded-xl p-3 w-full">
-                    {project.title}
-                  </p>
-                </a>
+                <p className="text-center font-semibold text-xl tracking-wide text-black py-4">
+                  {project.title}
+                </p>
+                <img
+                  src={project.img}
+                  className="w-full h-96 object-cover object-top rounded"
+                  alt={project.alt}
+                />
+                <p className="text-left bg-white tracking-wide text-black pt-8 px-4 w-full h-[250px] rounded-b-xl">
+                  {project.bio}
+                </p>
+                <div className="flex gap-2 mt-4">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.link}
+                    className="flex flex-col items-center gap-4 md:hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="w-full h-full bg-white hover:bg-gray-200 text-black rounded p-2 m-4">
+                      Website
+                    </div>
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={project.code}
+                    className="flex flex-col items-center gap-4 md:hover:scale-105 transition-transform duration-300"
+                  >
+                    <div className="w-full h-full bg-white hover:bg-gray-200 text-black rounded p-2 m-4">
+                      Code
+                    </div>
+                  </a>
+                </div>
               </article>
             ))}
           </div>
