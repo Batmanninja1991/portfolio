@@ -15,7 +15,7 @@ const About = () => {
       className="w-full h-full pt-28 text-white flex justify-center items-center"
     >
       <div
-        className="mx-auto p-8 bg-cover bg-bottom rounded-3xl"
+        className="mx-auto p-8 bg-cover lg:bg-bottom bg-right-bottom rounded-3xl"
         style={{ backgroundImage: `url(${aboutImg})` }}
       >
         <div className="md:w-2/3 lg:w-1/2 rounded-3xl bg-black/70 text-center p-6">

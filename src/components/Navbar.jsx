@@ -54,7 +54,7 @@ const Navbar = () => {
 
       {/** Hidden Menu */}
       {menuOpen && (
-        <div className="fixed menu inset-0 bg-black bg-opacity-90 z-40 md:hidden">
+        <div className="fixed menu inset-0 bg-black bg-opacity-90 z-50 md:hidden">
           <ul className="flex flex-col justify-end items-end p-20 gap-12 h-full">
             <Link to="/" onClick={handleLinkClick}>
               <li className="hover:underline text-white text-2xl">Home</li>
