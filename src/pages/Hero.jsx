@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
-import project1 from "../assets/ocp.png";
-import project2 from "../assets/ns.png";
-import project3 from "../assets/plumbingWebsite.png";
-import project4 from "../assets/asteroids.png";
+import project1 from "../assets/contractorWebsite.png";
+import project2 from "../assets/DSWebDesign Screenshot.png";
+import project3 from "../assets/ocp.png";
+import project4 from "../assets/ns.png";
 import profileImg from "../assets/profileImg.jpeg";
 import bgImg from "../assets/futuristicHome.webp";
 import space from "../assets/space.png";
@@ -14,6 +14,22 @@ import { RiTailwindCssFill } from "react-icons/ri";
 const projects = [
   {
     img: project1,
+    alt: "General Contractor Website",
+    link: "https://contractorllc.davidshawwebdesign.com",
+    code: "https://github.com/Batmanninja1991/contractorWebsite.git",
+    title: "Contractor Website",
+    bio: "A professional website designed for a general contractor business, providing information about services, project portfolio, and contact details. This project features a user-friendly interface with a clean layout, ensuring easy navigation and access to important information.",
+  },
+  {
+    img: project2,
+    alt: "Wordpress Portfolio",
+    link: "https://davidshawwebdesign.checkpowercord.com",
+    code: "",
+    title: "Wordpress Portfolio",
+    bio: "A professional WordPress portfolio website designed to showcase the work and services of a creative professional. This site features a clean and modern layout, highlighting project portfolios, detailed service descriptions, and contact information. With a user-friendly interface, it ensures easy navigation and accessibility, providing visitors with a seamless experience to explore and connect.",
+  },
+  {
+    img: project3,
     alt: "Company Website",
     link: "https://ocp.davidshawwebdesign.com",
     code: "https://github.com/Batmanninja1991/nailSalon",
@@ -21,28 +37,12 @@ const projects = [
     bio: "A comprehensive company website designed for an Oregon state community program, offering detailed information and resources for local residents. This project showcases a professional and user-friendly interface with easy navigation and informative content.",
   },
   {
-    img: project2,
+    img: project4,
     alt: "Nail Salon Website",
-    link: "https://ocp.davidshawwebdesign.com",
+    link: "https://mintnaildesign.davidshawwebdesign.com",
     code: "https://github.com/Batmanninja1991/Optimus-community-programs",
     title: "Nail Salon Website",
     bio: "An elegant and stylish website created for a nail salon, featuring services, pricing, and appointment booking. The design highlights the salon's aesthetic appeal with vibrant visuals and a clean layout, ensuring an excellent user experience.",
-  },
-  {
-    img: project3,
-    alt: "Plumbing Website",
-    link: "https://salemplumbing.davidshawwebdesign.com",
-    code: "https://github.com/Batmanninja1991/plumbingWebsite.git",
-    title: "Plumbing Website",
-    bio: "A professional website designed for a plumbing business, providing information about services, pricing, and contact details. This project features a user-friendly interface with a clean layout, ensuring easy navigation and access to important information. The design emphasizes the business's reliability and expertise in plumbing services.",
-  },
-  {
-    img: project4,
-    alt: "Asteroids Game",
-    link: "https://batmanninja1991.github.io/asteroids",
-    code: "https://github.com/Batmanninja1991/asteroids",
-    title: "Asteroids Game",
-    bio: "A fun and engaging browser-based game inspired by the classic Asteroids arcade game. This project highlights game development skills with smooth animations, interactive controls, and challenging gameplay, providing an entertaining user experience.",
   },
 ];
 
@@ -88,7 +88,7 @@ const Hero = () => {
           </div>
           <button
             onClick={scrollToAbout}
-            className="w-[200px] mx-auto bg-white text-black text-lg font-bold py-2 px-4 rounded-xl hover:scale-125 transition-all duration-500"
+            className="w-[200px] mx-auto bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
           >
             About Me
           </button>
@@ -117,7 +117,7 @@ const Hero = () => {
               </div>
               <button
                 onClick={scrollToProjects}
-                className="w-[200px] bg-white text-black text-lg font-bold py-2 px-4 rounded-xl hover:scale-125 transition-all duration-500"
+                className="w-[200px] bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
               >
                 Projects
               </button>
@@ -176,13 +176,13 @@ const Hero = () => {
               Projects
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 lg:gap-20 p-10 max-w-6xl">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-32 p-2 max-w-2xl xl:max-w-7xl">
             {projects.map((project, index) => (
               <article
                 key={index}
-                className="flex flex-col text-lg items-center bg-purple-400 p-4 rounded-xl hover:scale-105 transition-all duration-500"
+                className="flex flex-col text-lg items-center bg-purple-400/60 p-4 rounded-xl md:hover:scale-105 transition-all duration-500"
               >
-                <p className="text-center font-semibold text-xl tracking-wide text-black py-4">
+                <p className="text-center font-semibold text-xl tracking-wide text-white py-4">
                   {project.title}
                 </p>
                 <img
@@ -190,7 +190,7 @@ const Hero = () => {
                   className="w-full h-96 object-cover object-top rounded"
                   alt={project.alt}
                 />
-                <p className="text-left bg-white tracking-wide text-black py-8 px-4 w-full h-full rounded-b-xl">
+                <p className="text-left bg-white tracking-wide text-black py-8 px-6 w-full h-full rounded-b-xl">
                   {project.bio}
                 </p>
                 <div className="flex gap-2 mt-4">

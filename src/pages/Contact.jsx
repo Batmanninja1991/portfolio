@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import bgImg from "../assets/space.png";
 
 const Contact = () => {
   useEffect(() => {
@@ -8,16 +9,20 @@ const Contact = () => {
   }, []);
 
   return (
-    <div id="contact" className="w-full h-screen pt-28">
-      <div className="w-full h-full text-black flex justify-center items-center">
-        <div className="w-3/4 md:w-1/2 h-full flex flex-col justify-center text-white">
-          <h1 className="text-4xl font-bold mb-8 text-center">Contact Me</h1>
-          <p className="text-lg mb-8 text-center">
+    <div
+      id="contact"
+      className="w-full h-screen pt-28 bg-center bg-cover flex justify-center items-center"
+      style={{ backgroundImage: `url(${bgImg})` }}
+    >
+      <div className="text-black flex justify-center items-center">
+        <div className="w-full h-full max-w-3xl flex flex-col gap-4 p-4 md:p-8 justify-center text-white bg-black/80 rounded-3xl">
+          <h1 className="text-4xl font-bold text-center py-2">Contact Me</h1>
+          <p className="text-lg text-center">
             I'm always open to discussing web development projects, freelance
             work, or opportunities to collaborate. Feel free to reach out to me
             through any of the platforms below.
           </p>
-          <div className="flex flex-row justify-center items-center gap-12">
+          <div className="flex flex-row justify-center items-center gap-12 p-4">
             <a
               target="_blank"
               rel="noopener noreferrer"
