@@ -89,6 +89,7 @@ const Hero = () => {
           <button
             onClick={scrollToAbout}
             className="w-[200px] mx-auto bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
+            aria-label="scroll to about"
           >
             About Me
           </button>
@@ -118,6 +119,7 @@ const Hero = () => {
               <button
                 onClick={scrollToProjects}
                 className="w-[200px] bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
+                aria-label="scroll to projects"
               >
                 Projects
               </button>

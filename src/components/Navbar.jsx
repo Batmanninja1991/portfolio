@@ -15,63 +15,102 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-full h-[80px] bg-white fixed top-0 left-0 z-50 px-4">
-
-      {/** Navbar */}
+    <nav className="w-full h-[80px] bg-white fixed top-0 left-0 z-50 px-4">
       <div className="h-full flex justify-between items-center px-8">
-        <div>
-          <Link to="/">
-            <p className="text-xl lg:text-2xl">
-              <img src={logo} className="w-1/2 h-1/2 object-contain" />
-            </p>
-          </Link>
-        </div>
+        <Link to="/">
+          <img
+            src={logo}
+            className="w-1/2 h-1/2 object-contain"
+            alt="logo"
+            aria-label="logo"
+          />
+        </Link>
         <div className="hidden md:flex gap-8">
-          <Link to="/" className="hover:underline text-lg">
+          <Link to="/" className="hover:underline text-lg" aria-label="home">
             Home
           </Link>
-          <Link to="/projects" className="hover:underline text-lg">
+          <Link
+            to="/projects"
+            className="hover:underline text-lg"
+            aria-label="projects"
+          >
             Projects
           </Link>
-          <Link to="/about" className="hover:underline text-lg">
+          <Link
+            to="/about"
+            className="hover:underline text-lg"
+            aria-label="about"
+          >
             About
           </Link>
-          <Link to="/contact" className="hover:underline text-lg">
+          <Link
+            to="/contact"
+            className="hover:underline text-lg"
+            aria-label="contact"
+          >
             Contact
           </Link>
         </div>
-        <div
+        <button
           className="flex justify-center items-center gap-4 md:hidden z-50"
           onClick={handleMenu}
+          aria-label="menu"
         >
           {!menuOpen ? (
             <AiOutlineMenu size={40} />
           ) : (
             <AiOutlineClose size={40} className="text-white" />
           )}
-        </div>
+        </button>
       </div>
 
-      {/** Hidden Menu */}
       {menuOpen && (
-        <div className="fixed menu inset-0 bg-black bg-opacity-90 z-50 md:hidden">
-          <ul className="flex flex-col justify-end items-end p-20 gap-12 h-full">
-            <Link to="/" onClick={handleLinkClick}>
-              <li className="hover:underline text-white text-2xl">Home</li>
-            </Link>
-            <Link to="/projects" onClick={handleLinkClick}>
-              <li className="hover:underline text-white text-2xl">Projects</li>
-            </Link>
-            <Link to="/about" onClick={handleLinkClick}>
-              <li className="hover:underline text-white text-2xl">About</li>
-            </Link>
-            <Link to="/contact" onClick={handleLinkClick}>
-              <li className="hover:underline text-white text-2xl">Contact</li>
-            </Link>
+        <div className="fixed inset-0 bg-black bg-opacity-90 z-40 md:hidden">
+          <ul className="flex flex-col items-end p-20 gap-12 h-full">
+            <li>
+              <Link
+                to="/"
+                onClick={handleLinkClick}
+                className="hover:underline text-white text-2xl"
+                aria-label="home"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects"
+                onClick={handleLinkClick}
+                className="hover:underline text-white text-2xl"
+                aria-label="projects"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                onClick={handleLinkClick}
+                className="hover:underline text-white text-2xl"
+                aria-label="about"
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                onClick={handleLinkClick}
+                className="hover:underline text-white text-2xl"
+                aria-label="contact"
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   );
 };
 

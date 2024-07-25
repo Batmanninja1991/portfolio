@@ -28,6 +28,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               href="https://github.com/batmanninja1991"
               className="flex flex-col items-center"
+              aria-label="personal github link"
             >
               <FaGithub size={50} className="text-purple-800" />
               <p className="mt-4">GitHub</p>
@@ -37,6 +38,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               href="https://www.linkedin.com/in/david-shaw1991/"
               className="flex flex-col items-center"
+              aria-label="personal linkedin link"
             >
               <FaLinkedin size={50} className="text-blue-600" />
               <p className="mt-4">LinkedIn</p>
@@ -46,6 +48,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               href="mailto:davidshawwebdesign@gmail.com"
               className="flex flex-col items-center"
+              aria-label="business email"
             >
               <AiOutlineMail size={50} className="" />
               <p className="mt-4">Email</p>
