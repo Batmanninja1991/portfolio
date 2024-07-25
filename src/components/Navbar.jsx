@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
         <button
           className="flex justify-center items-center gap-4 md:hidden z-50"
-          onClick={handleMenu}
+          onClick={() => handleMenu()}
           aria-label="menu"
         >
           {!menuOpen ? (
@@ -70,7 +70,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                onClick={handleLinkClick}
+                onClick={() => handleLinkClick()}
                 className="hover:underline text-white text-2xl"
                 aria-label="home"
               >
@@ -80,7 +80,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/projects"
-                onClick={handleLinkClick}
+                onClick={() => handleLinkClick()}
                 className="hover:underline text-white text-2xl"
                 aria-label="projects"
               >
@@ -90,7 +90,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/about"
-                onClick={handleLinkClick}
+                onClick={() => handleLinkClick()}
                 className="hover:underline text-white text-2xl"
                 aria-label="about"
               >
@@ -100,7 +100,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/contact"
-                onClick={handleLinkClick}
+                onClick={() => handleLinkClick()}
                 className="hover:underline text-white text-2xl"
                 aria-label="contact"
               >

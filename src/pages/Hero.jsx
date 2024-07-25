@@ -70,9 +70,7 @@ const Hero = () => {
       <header
         id="hero"
         className="w-full h-screen flex flex-col justify-center items-center text-center bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: `url(${bgImg})`,
-        }}
+        style={{ backgroundImage: `url(${bgImg})` }}
       >
         <div className="w-full md:w-3/4 lg:w-1/2 flex flex-col justify-center gap-10 text-left">
           <div className="w-full bg-black/90 p-8 rounded-3xl">
@@ -87,7 +85,7 @@ const Hero = () => {
             </p>
           </div>
           <button
-            onClick={scrollToAbout}
+            onClick={() => scrollToAbout()}
             className="w-[200px] mx-auto bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
             aria-label="scroll to about"
           >
@@ -97,7 +95,6 @@ const Hero = () => {
       </header>
 
       <main>
-        {/* About Me Section */}
         <section
           id="about-section"
           className="w-full h-full md:h-screen py-4 flex md:flex-row flex-col justify-center items-center text-center bg-gray-800 bg-cover bg-top"
@@ -117,7 +114,7 @@ const Hero = () => {
                 </div>
               </div>
               <button
-                onClick={scrollToProjects}
+                onClick={() => scrollToProjects()}
                 className="w-[200px] bg-white text-black text-lg font-bold py-2 px-4 rounded-xl md:hover:scale-125 transition-all duration-500"
                 aria-label="scroll to projects"
               >
