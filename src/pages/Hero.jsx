@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import project1 from "../assets/contractorWebsite.png";
-import project2 from "../assets/DSWebDesign Screenshot.png";
+import project2 from "../assets/qehImg.png";
 import project3 from "../assets/ocp.png";
 import project4 from "../assets/ns.png";
 import profileImg from "../assets/profileImg.jpeg";
@@ -22,11 +22,11 @@ const projects = [
   },
   {
     img: project2,
-    alt: "Wordpress Portfolio",
-    link: "https://davidshawwebdesign.checkpowercord.com",
-    code: "",
+    alt: "Wordpress Website",
+    link: "https://qualityexteriorhomes.davidshawwebdesign.com",
+    code: "#project2",
     title: "Wordpress Portfolio",
-    bio: "A professional WordPress portfolio website designed to showcase the work and services of a creative professional. This site features a clean and modern layout, highlighting project portfolios, detailed service descriptions, and contact information. With a user-friendly interface, it ensures easy navigation and accessibility, providing visitors with a seamless experience to explore and connect.",
+    bio: "A professional WordPress website designed to showcase the work and services of a Exterior Remodeling Company. This site features a clean and modern layout, highlighting project portfolios, detailed service descriptions, and contact information. With a user-friendly interface, it ensures easy navigation and accessibility, providing visitors with a seamless experience to explore and connect.",
   },
   {
     img: project3,
